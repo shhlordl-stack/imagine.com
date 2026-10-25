@@ -1,0 +1,62 @@
+[
+  {
+    "id": "open-psychology",
+    "type": "公开课程",
+    "title": "开放心理学入门",
+    "meta": "OpenLearn · 课程",
+    "summary": "从研究方法、学习、记忆到社会行为，适合建立心理学的第一张地图。",
+    "badge": "适合入门",
+    "url": "https://www.open.edu/openlearn/health-sports-psychology/psychology",
+    "tone": "blue"
+  },
+  {
+    "id": "gutenberg-mind",
+    "type": "公共领域",
+    "title": "The Principles of Psychology",
+    "meta": "Project Gutenberg · 英文原典",
+    "summary": "William James 的经典心理学著作，适合慢读其中关于意识、习惯与自我的章节。",
+    "badge": "公共领域",
+    "url": "https://www.gutenberg.org/ebooks/57628",
+    "tone": "cream"
+  },
+  {
+    "id": "archive-psych",
+    "type": "开放馆藏",
+    "title": "Psychology 主题馆藏",
+    "meta": "Internet Archive · 馆藏检索",
+    "summary": "以 Psychology 为主题浏览可借阅、可公开阅读或可检索的历史资料与教材。",
+    "badge": "开放检索",
+    "url": "https://archive.org/search?query=psychology&and%5B%5D=mediatype%3A%22texts%22",
+    "tone": "lavender"
+  },
+  {
+    "id": "openstax-psych",
+    "type": "开放教材",
+    "title": "Psychology 2e",
+    "meta": "OpenStax · 教材",
+    "summary": "结构完整的开放教材，覆盖研究、发展、人格、临床与社会心理学。",
+    "badge": "免费阅读",
+    "url": "https://openstax.org/details/books/psychology-2e",
+    "tone": "mint"
+  },
+  {
+    "id": "open-library",
+    "type": "数字图书馆",
+    "title": "Open Library 心理学检索",
+    "meta": "Internet Archive · 目录",
+    "summary": "按主题、作者或出版信息查找心理学相关书目，部分条目提供借阅入口。",
+    "badge": "目录检索",
+    "url": "https://openlibrary.org/subjects/psychology",
+    "tone": "peach"
+  },
+  {
+    "id": "apa-topics",
+    "type": "知识索引",
+    "title": "APA Psychology Topics",
+    "meta": "American Psychological Association · 主题",
+    "summary": "从焦虑、睡眠到创伤与关系，按主题快速找到面向公众的可靠解释。",
+    "badge": "主题索引",
+    "url": "https://www.apa.org/topics",
+    "tone": "rose"
+  }
+]
