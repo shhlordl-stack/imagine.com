@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ee">
+  <meta name="description" content="三剑客：与过去、现在、未来三位向导，一起探索国内外的文化、科学和生活。Imagine 的好奇心分站。">
+  <title>三剑客 · 世界很大，好奇心再大一点</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./content.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#explore">跳到探索内容</a>
+  <svg class="symbol-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-book" viewBox="0 0 100 100"><path d="M14 24Q33 18 50 29Q67 18 86 24V77Q66 71 50 82Q34 71 14 77Z"/><path d="M50 29V82M25 36L39 39M25 48L39 51M25 60L39 63M61 39L76 35M61 51L76 47M61 63L76 59"/></symbol>
+    <symbol id="i-water" viewBox="0 0 100 100"><path d="M50 15C41 32 25 45 25 60A25 25 0 0 0 75 60C75 45 59 32 50 15Z"/><path d="M37 62Q37 73 49 75M10 86Q22 79 34 86T58 86T82 86T96 86"/></symbol>
+    <symbol id="i-garden" viewBox="0 0 100 100"><path d="M18 86V41A32 32 0 0 1 82 41V86M10 86H90M28 86L39 70L51 78L64 59L78 86M32 52V43Q51 47 51 67M68 40Q47 44 51 67"/><circle cx="63" cy="28" r="7"/></symbol>
+    <symbol id="i-tea" viewBox="0 0 100 100"><path d="M20 42H71V59Q70 78 46 78Q22 78 20 59ZM72 47H80Q93 48 89 61Q84 72 70 66M14 84H83M35 32Q24 21 37 11M52 32Q41 21 54 11M68 32Q57 21 70 11"/></symbol>
+    <symbol id="i-orbit" viewBox="0 0 100 100"><circle cx="50" cy="50" r="22"/><ellipse cx="50" cy="50" rx="45" ry="15" transform="rotate(-30 50 50)"/><path d="M46 32Q63 38 65 52M14 16V27M8 22H20M82 77V89M76 83H88"/><circle cx="83" cy="26" r="5"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 100 100"><path d="M44 12H56L59 25L69 29L80 22L88 31L80 42L84 52L96 56V68L82 71L77 81L84 92L74 99L64 89L53 92L48 100H36L33 86L23 82L12 89L4 79L13 68L10 57L1 54V42L15 39L20 29L14 18L24 11L35 21L44 18Z" transform="translate(8 0) scale(.85)"/><circle cx="50" cy="49" r="16"/></symbol>
+    <symbol id="i-bird" viewBox="0 0 100 100"><path d="M18 62Q30 55 34 37Q43 17 63 29L73 28L83 36L73 39Q72 61 50 65L33 82L40 65L18 72ZM45 45Q46 57 62 53M7 87H89M55 66V86M64 62V86"/><circle cx="63" cy="34" r="1.5"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 100 100"><path d="M20 38A34 34 0 0 1 80 37M80 62A34 34 0 0 1 20 63M17 20L20 38L38 35M83 80L80 62L62 65M48 30V51M33 42L50 55L69 43M50 55V75"/></symbol>
+  </defs></svg>
+  <header class="site-header"><div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="三剑客首页"><span class="brand-sign" aria-hidden="true"><i></i><i></i><i></i></span><span>三剑客<small>好奇心结伴出发</small></span></a>
+    <nav aria-label="主导航"><a href="#explore">世界探索</a><a href="#journeys">时间漫游</a><a href="#play">脑洞补给</a></nav>
+    <a class="back-imagine" href="../index.html">← 返回 Imagine</a>
+  </div></header>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy"><div class="eyebrow"><span class="tiny-spark" aria-hidden="true">✳</span> Imagine 的另一扇门 / Vol. 01</div><h1>世界很大，<br>好奇心<span class="highlight">再大一点。</span></h1><p>一个人看世界，三位向导陪你走。<br>跟过去聊聊，和现在碰杯，再向未来借一点想象力。</p><div class="hero-actions"><a class="button coral" href="#explore">带我去看看 <span aria-hidden="true">↗</span></a><button class="button outline" id="surpriseHero">给我一个意外 <span aria-hidden="true">✦</span></button></div><div class="hero-footnote"><span class="mini-line"></span>不赶路，不打卡。这是一次没有标准答案的探索。</div></div>
+      <div class="hero-art" aria-label="过去、现在、未来三位探索向导">
+        <div class="art-caption">你的同行伙伴，已就位。</div>
+        <button class="guide-door door-past" data-guide="past" aria-label="跟过去向导探索"><span class="door-number">01 / THEN</span><span class="door-visual"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#i-book"/></svg><span class="orbit-dot"></span></span><strong>过去</strong><span class="door-label">把故事翻到第一页</span><span class="door-arrow">↗</span></button>
+        <button class="guide-door door-now" data-guide="now" aria-label="跟现在向导探索"><span class="door-number">02 / NOW</span><span class="door-visual eye-visual"><span class="eye"><i></i></span><span class="eye-rays"></span></span><strong>现在</strong><span class="door-label">让熟悉重新变陌生</span><span class="door-arrow">↗</span></button>
+        <button class="guide-door door-future" data-guide="future" aria-label="跟未来向导探索"><span class="door-number">03 / NEXT</span><span class="door-visual"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#i-orbit"/></svg><span class="future-star">✳</span></span><strong>未来</strong><span class="door-label">给未知留一扇窗</span><span class="door-arrow">↗</span></button>
+        <span class="art-seal">第四位伙伴<br><b>就是你</b></span>
+      </div>
+    </section>
+    <div class="chapter-line"><div class="wrap"><span>三位时间向导</span><i>+</i><span>国内外双重视角</span><i>+</i><span>文化 · 科学 · 生活 · 自然</span><strong>＝ 不一样的世界</strong></div></div>
+    <section class="section wrap" id="explore">
+      <div class="section-heading"><div><div class="eyebrow">01 / 世界探索</div><h2>挑一个坐标，<br class="mobile-break">发现一点新鲜。</h2></div><p>从一座园林到一颗冰封卫星。<br>跨过时间与地域，看看事情还能怎样发生。</p></div>
+      <div class="filter-panel"><div class="filter-line"><span class="filter-label">时间</span><div class="chips" id="eraFilters" role="group" aria-label="筛选时间"><button class="chip active" data-era="all" aria-pressed="true">全部时间</button><button class="chip" data-era="past" aria-pressed="false">过去 · 来时的路</button><button class="chip" data-era="now" aria-pressed="false">现在 · 此刻的光</button><button class="chip" data-era="future" aria-pressed="false">未来 · 未知的门</button></div></div><div class="filter-line"><span class="filter-label">视角</span><div class="chips" id="regionFilters" role="group" aria-label="筛选地域"><button class="chip active" data-region="all" aria-pressed="true">国内外一起看</button><button class="chip" data-region="china" aria-pressed="false">国内视角</button><button class="chip" data-region="world" aria-pressed="false">国外 / 国际视角</button></div><label class="search"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="M15 15L21 21"/></svg><input type="search" id="storySearch" placeholder="搜一个好奇的问题…" aria-label="搜索故事"></label></div><div class="topic-line" id="topicFilters" role="group" aria-label="筛选主题"><button class="topic active" data-topic="all" aria-pressed="true">所有主题</button><button class="topic" data-topic="文化" aria-pressed="false">文化</button><button class="topic" data-topic="科学" aria-pressed="false">科学</button><button class="topic" data-topic="生活" aria-pressed="false">生活</button><button class="topic" data-topic="自然" aria-pressed="false">自然</button></div></div>
+      <div class="results-line"><p id="resultCount" aria-live="polite"></p><button class="text-button" id="resetFilters">重置坐标 ↺</button></div>
+      <div class="story-grid" id="storyGrid"></div><noscript><p>请开启浏览器 JavaScript 以筛选与阅读故事。页面不会因此开启行为追踪。</p></noscript>
+      <div class="load-row"><button class="button outline" id="loadMore">再翻开六个故事 ↓</button><p>“未来”栏目是基于事实线索的想象实验，不是已经发生的新闻。</p></div>
+    </section>
+    <section class="journey-section" id="journeys"><div class="wrap">
+      <div class="section-heading"><div><div class="eyebrow">02 / 时间漫游</div><h2>同一件小事，<br>三个时代的回声。</h2></div><p>不用记住一整本历史。<br>跟着一滴水、一张茶桌、一个问题，走一小段就好。</p></div>
+      <div class="journey-tabs" id="journeyTabs" role="group" aria-label="选择漫游路线"></div>
+      <div class="journey-track" id="journeyTrack"></div>
+      <div class="journey-note"><span>不是进步排行榜</span><p>过去不总是落后，未来也不自动更好。我们比较的是不同条件下，人如何选择。</p></div>
+    </div></section>
+    <section class="section wrap play-section" id="play">
+      <div class="play-copy"><div class="eyebrow">03 / 脑洞补给</div><h2>猜一下，<br>再把问题打开。</h2><p>四道小题，不测智商，也不评判你。<br>答案只是下一段故事的入口。</p><div class="play-drawing" aria-hidden="true"><span>?</span><svg viewBox="0 0 100 100"><use href="#i-gear"/></svg><i>!</i></div><p class="privacy-micro">答题只在本页运行，不保存分数，不上传答案。</p></div>
+      <div class="quiz-card" id="quizCard" aria-live="polite"></div>
+    </section>
+    <section class="notes-section wrap" id="reading"><div class="notes-heading"><div class="eyebrow">04 / 继续走走</div><h2>好故事，都有下一页。</h2></div><div class="reading-grid">
+      <a href="https://www.gutenberg.org/ebooks/1257" target="_blank" rel="noopener noreferrer" class="reading-card"><span>文学入口 / 英文原著</span><h3>真正的《三剑客》</h3><p>看看这四位伙伴，如何让冒险发生。</p><b>Project Gutenberg ↗</b></a>
+      <a href="https://eyes.jpl.nasa.gov/eyes-on-exoplanets.html" target="_blank" rel="noopener noreferrer" class="reading-card"><span>科学入口 / 交互可视化</span><h3>宇宙在浏览器里</h3><p>带着一个问题，再去看一次陌生行星。</p><b>NASA Eyes ↗</b></a>
+      <a href="../index.html#library" class="reading-card"><span>回到起点 / Imagine</span><h3>你的开放阅读书架</h3><p>把世界的好奇，带回对自己的理解。</p><b>返回 Imagine 书架 ↗</b></a>
+    </div></section>
+    <section class="manifesto wrap"><span class="brand-sign" aria-hidden="true"><i></i><i></i><i></i></span><h2>三个时间，一起看。<br>一个世界，慢慢懂。</h2><p>我们给事实留出处，给想象贴标签，给阅读留自由。<br>不登记、不统计；未经明确同意，不追踪你的浏览行为。</p><a class="button coral" href="../index.html">带着好奇，回 Imagine →</a></section>
+  </main>
+  <footer class="wrap site-footer"><span>三剑客 <small>Imagine · 好奇心分站</small></span><p>本站未接入埋点或分析脚本。外部资源有各自的隐私及版权规则。<br>内容整理于 2026-10-26；事实、观察建议与未来设想分别标注。</p><a href="#top">回到顶部 ↑</a></footer>
+  <dialog id="storyDialog" class="story-dialog" aria-labelledby="dialogTitle"><div class="dialog-bar"><span>三剑客 / 故事展开</span><button id="closeStory" class="icon-button" aria-label="关闭故事">×</button></div><div id="dialogContent"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
