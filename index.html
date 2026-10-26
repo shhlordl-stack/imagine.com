@@ -160,6 +160,81 @@
     .role-option.active { background:var(--ink); border-color:var(--ink); color:#fff; }
     .toast { position:fixed; z-index:60; left:50%; bottom:24px; transform:translate(-50%, 20px); opacity:0; pointer-events:none; background:var(--ink); color:#fff; border-radius:999px; padding:11px 17px; font-size:12px; transition: .25s ease; }
     .toast.show { transform:translate(-50%, 0); opacity:1; }
+    .portal-section { padding: 8px 0 36px; }
+    .portal-link { display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:28px; padding:28px 34px; background:#f0e8d5; border:1px solid #dbd0b8; border-radius:22px; position:relative; overflow:hidden; transition:background .2s,transform .2s; }
+    .portal-link:hover { background:#f3e2bd; transform:translateY(-3px); }
+    .portal-link:focus-visible { outline:3px solid var(--coral); outline-offset:5px; }
+    .portal-symbol { display:flex; gap:6px; align-items:end; transform:rotate(-12deg); padding:4px 12px; }
+    .portal-symbol i { display:block; width:13px; height:48px; background:#d4b358; border:1px solid var(--ink); border-radius:25px 25px 4px 4px; }
+    .portal-symbol i:nth-child(2) { height:64px; background:#e7b4a8; }
+    .portal-symbol i:nth-child(3) { height:54px; background:#abc5df; }
+    .portal-copy small { color:#856b39; font-size:10px; font-weight:700; letter-spacing:2px; display:block; margin-bottom:7px; }
+    .portal-copy h2 { font-size:28px; letter-spacing:-1px; line-height:1.35; margin:0 0 6px; }
+    .portal-copy p { font-size:12px; color:#736959; margin:0; }
+    .portal-cta { background:var(--white); border:1px solid #d3c4a7; border-radius:999px; padding:12px 18px; font-size:12px; white-space:nowrap; }
+    @media(max-width:700px) { .portal-link { grid-template-columns:1fr auto; gap:16px; padding:24px; } .portal-symbol { display:none; } .portal-copy h2 { font-size:23px; } .portal-copy p { font-size:11px; } .portal-cta { font-size:11px; padding:10px 12px; } }
+    @media(max-width:430px) { .portal-link { grid-template-columns:1fr; } .portal-cta { justify-self:start; } }
+    .age-section { background: #f2eee3; }
+    .age-tabs { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:20px; }
+    .age-tab { display:flex; flex-direction:column; gap:1px; align-items:flex-start; min-width:150px; padding:13px 20px; border-radius:16px; border:1px solid var(--line); background:rgba(255,253,249,.72); color:var(--muted); text-align:left; transition:transform .18s ease, background .18s ease, border-color .18s ease; }
+    .age-tab:hover { transform:translateY(-2px); background:var(--white); }
+    .age-tab b { font-size:17px; color:var(--ink); letter-spacing:-.03em; }
+    .age-tab small { font-size:11px; letter-spacing:.02em; }
+    .age-tab.active { border-color:#c9bfa5; background:var(--sun); color:#7b6428; }
+    .age-tab[data-age="middle"].active { background:var(--mint); border-color:#a9cdb9; color:#4f7561; }
+    .age-tab[data-age="high"].active { background:var(--violet); border-color:#c0b5da; color:#635a80; }
+    .age-tab:focus-visible { outline:3px solid var(--coral); outline-offset:4px; }
+    .age-panel { display:grid; gap:16px; }
+    .age-head { display:grid; grid-template-columns:1.35fr .65fr; gap:26px; align-items:end; background:var(--white); border:1px solid rgba(23,39,51,.07); border-radius:var(--radius-lg); padding:30px 32px; }
+    .age-head h3 { margin:7px 0 10px; font-size:clamp(26px,3.2vw,40px); line-height:1.08; letter-spacing:-.065em; }
+    .age-head p { margin:0; color:var(--muted); font-size:14px; max-width:540px; }
+    .age-facts { display:grid; gap:9px; }
+    .age-fact { display:flex; align-items:baseline; justify-content:space-between; gap:12px; padding-bottom:8px; border-bottom:1px dashed var(--line); font-size:12px; color:var(--muted); }
+    .age-fact:last-child { border-bottom:0; padding-bottom:0; }
+    .age-fact b { font-size:19px; color:var(--ink); letter-spacing:-.04em; }
+    .age-subhead { display:flex; align-items:baseline; justify-content:space-between; gap:14px; margin:12px 2px 0; }
+    .age-subhead h4 { margin:0; font-size:20px; letter-spacing:-.045em; }
+    .age-subhead span { font-size:11px; color:var(--muted); }
+    .interest-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+    .interest { background:var(--white); border:1px solid rgba(23,39,51,.07); border-radius:var(--radius-md); padding:17px 18px; }
+    .interest span { font-size:10px; font-weight:800; letter-spacing:.12em; color:var(--coral-dark); }
+    .interest b { display:block; margin:7px 0 6px; font-size:15px; letter-spacing:-.03em; line-height:1.25; }
+    .interest p { margin:0; font-size:12px; color:var(--muted); line-height:1.55; }
+    .book-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+    .book-card { display:flex; flex-direction:column; gap:6px; background:var(--white); border:1px solid rgba(23,39,51,.07); border-left:4px solid #d9c48c; border-radius:14px; padding:17px 18px; }
+    .book-card:nth-child(3n+2) { border-left-color:#9ec4b1; }
+    .book-card:nth-child(3n+3) { border-left-color:#b9aede; }
+    .book-tag { font-size:10px; font-weight:700; letter-spacing:.08em; color:var(--coral-dark); }
+    .book-card b { font-size:15px; line-height:1.3; letter-spacing:-.02em; }
+    .book-author { font-size:11px; color:var(--muted); }
+    .book-why { margin:2px 0 0; font-size:12px; color:#4f5f66; line-height:1.6; }
+    .book-where { margin-top:auto; padding-top:9px; border-top:1px dashed var(--line); font-size:10px; color:var(--muted); }
+    .explain-list { display:grid; gap:9px; }
+    .explain { background:var(--white); border:1px solid rgba(23,39,51,.07); border-radius:var(--radius-md); overflow:hidden; }
+    .explain summary { display:flex; align-items:flex-start; gap:14px; padding:17px 20px; cursor:pointer; list-style:none; }
+    .explain summary::-webkit-details-marker { display:none; }
+    .explain summary:focus-visible { outline:3px solid var(--coral); outline-offset:-3px; }
+    .explain-index { flex:none; width:26px; height:26px; border-radius:50%; background:var(--paper); border:1px solid var(--line); display:grid; place-items:center; font-size:11px; font-weight:700; color:var(--muted); }
+    .explain-q { display:block; font-size:15px; font-weight:700; letter-spacing:-.02em; line-height:1.4; }
+    .explain-short { display:block; margin-top:3px; font-size:12px; font-weight:400; color:var(--muted); }
+    .explain-mark { flex:none; margin-left:auto; font-size:18px; color:var(--muted); transition:transform .2s ease; }
+    .explain[open] .explain-mark { transform:rotate(45deg); color:var(--coral-dark); }
+    .explain-body { padding:0 20px 20px 60px; }
+    .explain-inner { border-top:1px dashed var(--line); padding-top:15px; }
+    .explain-body p { margin:0 0 11px; font-size:13px; color:#4f5f66; line-height:1.75; }
+    .try-it { margin-top:13px; padding:13px 15px; border-radius:12px; background:#eef5ef; font-size:12px; color:#3f5c48; line-height:1.65; }
+    .try-it b { display:block; margin-bottom:4px; font-size:10px; letter-spacing:.12em; color:#4f7558; }
+    .caveat { margin-top:10px !important; margin-bottom:0 !important; font-size:11px !important; color:var(--muted) !important; line-height:1.6 !important; }
+    .myth-panel { background:var(--ink); color:#e8eef1; border-radius:var(--radius-lg); padding:28px 32px; }
+    .myth-panel h4 { margin:0 0 5px; font-size:21px; letter-spacing:-.045em; color:#fff; }
+    .myth-lead { margin:0 0 18px; font-size:12px; color:#9fb0b9; }
+    .myth-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:9px; }
+    .myth { padding:14px 16px; border-radius:13px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.13); }
+    .myth s { display:block; margin-bottom:6px; font-size:13px; color:#f2a795; text-decoration-thickness:1px; }
+    .myth p { margin:0; font-size:12px; line-height:1.65; color:#c2ced4; }
+    .age-footnote { margin:14px 2px 0; font-size:11px; color:var(--muted); line-height:1.7; }
+    @media (max-width:900px) { .age-head { grid-template-columns:1fr; gap:18px; align-items:start; } .interest-grid, .book-grid { grid-template-columns:repeat(2,1fr); } .myth-grid { grid-template-columns:1fr; } }
+    @media (max-width:560px) { .age-tab { flex:1 1 100%; min-width:0; } .interest-grid, .book-grid { grid-template-columns:1fr; } .age-head, .myth-panel { padding:24px; } .explain-body { padding:0 18px 18px; } .age-subhead { display:block; } .age-subhead span { display:block; margin-top:3px; } }
     @media (max-width: 900px) { .hero-grid, .manifesto-grid { grid-template-columns:1fr; gap:34px; } .hero-art { min-height:380px; max-width:520px; width:100%; margin:0 auto; } .lesson-grid { grid-template-columns:repeat(2,1fr); } .resource-grid { grid-template-columns:repeat(2,1fr); } .nav-links { display:none; } }
     @media (max-width: 560px) { .wrap { width:min(100% - 32px, 1160px); } .topline-inner { padding:8px 0; align-items:flex-start; } .topline-inner span:last-child { display:none; } .nav { height:68px; } .access-pill { display:none; } .hero { padding-top:48px; } h1 { font-size:54px; } .hero-art { transform:scale(.85); transform-origin:top center; margin-bottom:-50px; } .section { padding:54px 0; } .section-head { display:block; } .section-intro { margin-top:13px; } .lesson-grid, .resource-grid { grid-template-columns:1fr; } .principles { grid-template-columns:1fr; } .footer-inner { display:block; } .footer-links { justify-content:flex-start; margin-top:18px; } }
   </style>
@@ -169,7 +244,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Imagine 首页"><span class="brand-mark"></span>Imagine</a>
-      <nav class="nav-links" aria-label="主导航"><a href="#lessons">心理课</a><a href="#library">图书资源</a><a href="#manifesto">关于 Imagine</a></nav>
+      <nav class="nav-links" aria-label="主导航"><a href="#lessons">心理课</a><a href="#ages">分龄阅读</a><a href="#library">图书资源</a><a href="./sanjianke/index.html">三剑客 ↗</a><a href="#manifesto">关于 Imagine</a></nav>
       <div class="nav-actions"><span class="access-pill"><i class="status-dot"></i><span id="accessText">公开阅读已开启</span></span><button class="btn secondary" id="loginBtn">进入我的 Imagine</button></div>
     </div>
   </header>
@@ -181,47 +256,61 @@
         <h1>把复杂的心理学，<em>讲给你听。</em></h1>
         <p class="hero-copy">Imagine 是一个轻一点的心理学空间：我们拆开那些习以为常的情绪、关系与行为，也把值得慢慢读的开放书目放到同一张桌子上。</p>
         <div class="hero-ctas"><a class="btn coral" href="#lessons">开始一节心理课</a><a class="btn secondary" href="#library">去书架逛逛</a></div>
-        <div class="hero-note"><span class="avatar-stack"><i class="avatar">I</i><i class="avatar">M</i><i class="avatar">G</i></span><span>已有 2,480 位读者把这里加入了自己的收藏</span></div>
+        <div class="hero-note"><span class="avatar-stack"><i class="avatar">I</i><i class="avatar">M</i><i class="avatar">G</i></span><span>公开阅读，不赶时间；带一点好奇，随时出发</span></div>
       </div>
       <div class="hero-art" aria-label="Imagine 视觉卡片">
         <div class="art-card art-small one"><span>今日提问</span><strong>我真的在休息吗？</strong><span>还是只是在切换任务。</span></div>
         <div class="art-card art-main"><span class="art-label">IMAGINE / 01</span><h3>认识你的注意力，像认识一只小动物。</h3><p>它会被新鲜的声音吸引，也需要安全感和一点点耐心。</p><div class="art-lines"><span></span><span></span><span></span></div><span class="art-tag">6 min read</span></div>
-        <div class="art-card art-small two"><span>阅读状态</span><strong>慢一点，也算前进。</strong><span>本周已读 03 篇</span></div>
+        <div class="art-card art-small two"><span>阅读提案</span><strong>慢一点，也算前进。</strong><span>下一站：三剑客的世界</span></div>
       </div>
     </div></section>
+
+    <section class="portal-section" aria-label="三剑客探索入口"><div class="wrap"><a class="portal-link" href="./sanjianke/index.html"><span class="portal-symbol" aria-hidden="true"><i></i><i></i><i></i></span><div class="portal-copy"><small>IMAGINE / 好奇心的另一扇门</small><h2>出发，去遇见「三剑客」。</h2><p>过去、现在、未来三位向导，带你探索国内外的文化、科学与生活。</p></div><span class="portal-cta">打开探索分站 ↗</span></a></div></section>
 
     <section class="section" id="lessons"><div class="wrap">
       <div class="section-head"><div><div class="section-kicker">01 / 心理课</div><h2>先从理解自己开始</h2></div><p class="section-intro">没有考试，也不要求你立刻变得更好。每一篇只讲清楚一个日常困惑，再留一个可以带走的小练习。</p></div>
       <div class="lesson-grid" id="lessonGrid"></div>
     </div></section>
 
+    <section class="section age-section" id="ages"><div class="wrap">
+      <div class="section-head"><div><div class="section-kicker">02 / 分龄入口</div><h2>不同年纪，好奇不同的东西</h2></div><p class="section-intro">同一个问题，六岁、十三岁和十七岁想知道的并不是同一部分。这里按年龄分开：先看兴趣方向，再挑几本书，最后读一篇有趣的解读。</p></div>
+      <div class="age-tabs" id="ageTabs" role="tablist" aria-label="选择年龄段"></div>
+      <div class="age-panel" id="agePanel" role="tabpanel" tabindex="0"></div>
+      <div class="myth-panel" id="mythPanel"></div>
+      <p class="age-footnote">书目只做推荐，不提供下载。请通过公共图书馆、学校图书馆或正规书店获取；教材与工具书建议选最新版本。</p>
+    </div></section>
+
     <section class="section library-section" id="library"><div class="wrap">
-      <div class="section-head"><div><div class="section-kicker">02 / OPEN SHELF</div><h2>给好奇心一座书架</h2></div><p class="section-intro">这里优先收录公共领域、开放教材与合法公开课程。我们借鉴数字图书馆的探索感，但不提供未经授权的盗版内容。</p></div>
+      <div class="section-head"><div><div class="section-kicker">03 / OPEN SHELF</div><h2>给好奇心一座书架</h2></div><p class="section-intro">这里优先收录公共领域、开放教材与合法公开课程。我们借鉴数字图书馆的探索感，但不提供未经授权的盗版内容。</p></div>
       <div class="library-tools"><div class="search"><input id="searchInput" type="search" placeholder="搜索书名、主题或平台" aria-label="搜索资源" /></div><div class="filters" id="filters"><button class="filter active" data-type="全部">全部</button><button class="filter" data-type="开放教材">开放教材</button><button class="filter" data-type="公共领域">公共领域</button><button class="filter" data-type="公开课程">公开课程</button><button class="filter" data-type="知识索引">知识索引</button></div></div>
       <div class="resource-grid" id="resourceGrid"></div>
     </div></section>
 
     <section class="manifesto" id="manifesto"><div class="wrap manifesto-grid">
-      <div><div class="section-kicker">03 / WHY IMAGINE</div><h2 class="manifesto-title">知识不该让人更紧张，<span>而是更自由。</span></h2></div>
+      <div><div class="section-kicker">04 / WHY IMAGINE</div><h2 class="manifesto-title">知识不该让人更紧张，<span>而是更自由。</span></h2></div>
       <div><p class="manifesto-copy">我们相信，好的心理学内容不应该只在论文和诊室里出现。它可以用日常语言抵达你，既不把每种情绪都病理化，也不把所有问题都归因于“想开一点”。</p><div class="principles"><div class="principle"><b>讲清楚，不吓人</b><p>区分科普、诊断与治疗建议，尊重每个人的复杂处境。</p></div><div class="principle"><b>开放，但不失出处</b><p>链接到合法公开的书目、课程与机构页面，方便继续求证。</p></div><div class="principle"><b>给行动，也给余地</b><p>每篇内容只提供一个小入口，不要求你一次解决全部人生。</p></div><div class="principle"><b>隐私优先</b><p>阅读偏好只保存在当前设备；公开浏览无需提交个人信息。</p></div></div><div class="permission-strip"><div><strong>访问权限已开启</strong><small>公开读者可浏览全部心理课与开放资源；收藏功能在登录后启用。</small></div><span class="permission-chip">Public / Reader</span></div></div>
     </div></section>
   </main>
 
-  <footer><div class="wrap footer-inner"><div><div class="footer-brand">Imagine</div><div>给思考留一点呼吸的地方。</div></div><div class="footer-links"><a href="#lessons">心理课</a><a href="#library">开放书架</a><a href="#manifesto">阅读原则</a><a href="mailto:hello@imagine.com">联系编辑部</a></div></div></footer>
+  <footer><div class="wrap footer-inner"><div><div class="footer-brand">Imagine</div><div>给思考留一点呼吸的地方。</div></div><div class="footer-links"><a href="#lessons">心理课</a><a href="#ages">分龄阅读</a><a href="#library">开放书架</a><a href="#manifesto">阅读原则</a><a href="mailto:hello@imagine.com">联系编辑部</a></div></div></footer>
 
   <div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="modal-close" id="closeModal" aria-label="关闭">×</button><div class="section-kicker">MY IMAGINE</div><h3 id="modalTitle">把喜欢的内容留住</h3><p>登录后可以收藏书目与心理课。演示模式会把信息保存在当前设备，不会上传到服务器。</p><label for="loginName">你的昵称</label><input id="loginName" type="text" placeholder="例如：Mina" maxlength="20" /><label>选择访问身份</label><div class="role-list"><button class="role-option active" data-role="读者">读者</button><button class="role-option" data-role="编辑">编辑</button><button class="role-option" data-role="研究者">研究者</button></div><button class="btn coral" id="confirmLogin">开启我的阅读权限</button></div></div>
   <div class="toast" id="toast"></div>
 
   <script>
-    const state = { lessons: [], resources: [], type: '全部', query: '', saved: JSON.parse(localStorage.getItem('imagine-saved') || '[]'), user: JSON.parse(localStorage.getItem('imagine-user') || 'null') };
+    const state = { lessons: [], resources: [], ages: [], myths: [], age: 'primary', type: '全部', query: '', saved: JSON.parse(localStorage.getItem('imagine-saved') || '[]'), user: JSON.parse(localStorage.getItem('imagine-user') || 'null') };
     const lessonGrid = document.getElementById('lessonGrid');
     const resourceGrid = document.getElementById('resourceGrid');
+    const ageTabs = document.getElementById('ageTabs');
+    const agePanel = document.getElementById('agePanel');
+    const mythPanel = document.getElementById('mythPanel');
     const toast = document.getElementById('toast');
     const loginModal = document.getElementById('loginModal');
     const accessText = document.getElementById('accessText');
 
     const fallbackLessons = [{ id:'attention', tag:'注意力', title:'注意力不是开关，而是一束会移动的光', summary:'理解注意力如何在目标、环境与身体能量之间切换，把“我怎么又分心了”换成可练习的策略。', readTime:'6 分钟', color:'coral', icon:'✦', body:['注意力更像一束手电筒的光：它照亮了当下的目标，也会被新鲜、危险或未完成的事情吸走。分心不是道德失败，而是大脑在处理优先级。'] }];
     const fallbackResources = [{ id:'open-psychology', type:'公开课程', title:'开放心理学入门', meta:'OpenLearn · 课程', summary:'从研究方法、学习、记忆到社会行为，适合建立心理学的第一张地图。', badge:'适合入门', url:'https://www.open.edu/openlearn/health-sports-psychology/psychology', tone:'blue' }];
+    const fallbackAges = { groups: [{ id:'primary', label:'小学生', range:'6–12 岁', kicker:'PRIMARY', motto:'先觉得世界好玩，再问它为什么。', intro:'分龄内容正在加载，请稍后刷新页面。', interests:[], books:[], explainers:[] }], myths: [] };
 
     function showToast(message) { toast.textContent = message; toast.classList.add('show'); clearTimeout(showToast.timer); showToast.timer = setTimeout(() => toast.classList.remove('show'), 2600); }
     function renderLessons() { lessonGrid.innerHTML = state.lessons.map(item => `<article class="lesson-card ${item.color}"><div><div class="card-top"><span>${item.tag}</span><span class="card-icon">${item.icon}</span></div><h3>${item.title}</h3><p>${item.summary}</p></div><div class="card-bottom"><span>${item.readTime}</span><button class="read-arrow" aria-label="阅读 ${item.title}" data-lesson="${item.id}">↗</button></div></article>`).join(''); }
@@ -231,9 +320,71 @@
       if (!rows.length) { resourceGrid.innerHTML = '<div class="empty">没有找到匹配的资源。试试“睡眠”“开放”或换一个分类。</div>'; return; }
       resourceGrid.innerHTML = rows.map(item => { const saved = state.saved.includes(item.id); return `<article class="resource-card ${item.tone}"><div><div class="resource-meta"><span>${item.type}</span><span class="resource-badge">${item.badge}</span></div><h3>${item.title}</h3><p>${item.summary}</p></div><div class="resource-footer"><a class="resource-link" href="${item.url}" target="_blank" rel="noopener">打开资源 ↗</a><button class="bookmark ${saved ? 'saved' : ''}" data-save="${item.id}" aria-label="${saved ? '取消收藏' : '收藏'}">${saved ? '★' : '☆'}</button></div></article>`; }).join('');
     }
+    function renderAgeTabs() {
+      ageTabs.innerHTML = state.ages.map(group => `<button class="age-tab ${group.id === state.age ? 'active' : ''}" role="tab" aria-selected="${group.id === state.age}" aria-controls="agePanel" data-age="${group.id}"><b>${group.label}</b><small>${group.range}</small></button>`).join('');
+    }
+    function renderAgePanel() {
+      const group = state.ages.find(item => item.id === state.age) || state.ages[0];
+      if (!group) { agePanel.innerHTML = '<div class="empty">分龄内容暂时不可用，请稍后刷新。</div>'; return; }
+      const interests = group.interests.map((item, index) => `<div class="interest"><span>0${index + 1} / 兴趣</span><b>${item.title}</b><p>${item.note}</p></div>`).join('');
+      const books = group.books.map(book => `<article class="book-card"><span class="book-tag">${book.tag}</span><b>${book.title}</b><span class="book-author">${book.author}</span><p class="book-why">${book.why}</p><span class="book-where">${book.where}</span></article>`).join('');
+      const explainers = group.explainers.map((item, index) => `<details class="explain"><summary><span class="explain-index">0${index + 1}</span><span><span class="explain-q">${item.question}</span><span class="explain-short">${item.short}</span></span><span class="explain-mark" aria-hidden="true">+</span></summary><div class="explain-body"><div class="explain-inner">${item.body.map(paragraph => `<p>${paragraph}</p>`).join('')}<div class="try-it"><b>可以试试</b>${item.tryIt}</div><p class="caveat">需要留意：${item.caveat}</p></div></div></details>`).join('');
+      agePanel.innerHTML = `<div class="age-head"><div><div class="section-kicker">${group.kicker}</div><h3>${group.motto}</h3><p>${group.intro}</p></div><div class="age-facts"><div class="age-fact"><span>适合年龄</span><b>${group.range}</b></div><div class="age-fact"><span>兴趣方向</span><b>${group.interests.length}</b></div><div class="age-fact"><span>推荐读物</span><b>${group.books.length}</b></div><div class="age-fact"><span>有趣解读</span><b>${group.explainers.length}</b></div></div></div><div class="age-subhead"><h4>先从这些方向开始</h4><span>不按难度排序，按好奇心排序</span></div><div class="interest-grid">${interests}</div><div class="age-subhead"><h4>值得放在手边的书</h4><span>共 ${group.books.length} 本 · 公共与学校图书馆大多能找到</span></div><div class="book-grid">${books}</div><div class="age-subhead"><h4>三个有趣的解读</h4><span>点开看解释，末尾都有一个可以自己试的小实验</span></div><div class="explain-list">${explainers}</div>`;
+    }
+    function renderMyths() {
+      if (!state.myths.length) { mythPanel.hidden = true; return; }
+      mythPanel.hidden = false;
+      mythPanel.innerHTML = `<h4>顺便拆掉四个说法</h4><p class="myth-lead">它们流传得很广，也常出现在作文和课堂里，但证据并不支持。</p><div class="myth-grid">${state.myths.map(item => `<div class="myth"><s>${item.claim}</s><p>${item.truth}</p></div>`).join('')}</div>`;
+    }
+    function applyAges(data) {
+      state.ages = (data && data.groups) || [];
+      state.myths = (data && data.myths) || [];
+      if (!state.ages.some(group => group.id === state.age)) state.age = state.ages.length ? state.ages[0].id : 'primary';
+      renderAgeTabs();
+      renderAgePanel();
+      renderMyths();
+    }
     function updateAccess() { if (state.user) { accessText.textContent = `${state.user.role} · ${state.user.name}`; document.getElementById('loginBtn').textContent = '我的 Imagine'; } }
-    async function loadContent() { const embedded = window.__IMAGINE_CONTENT__; if (embedded && embedded.lessons && embedded.resources) { state.lessons = embedded.lessons; state.resources = embedded.resources; renderLessons(); renderResources(); return; } try { const [lessons, resources] = await Promise.all([fetch('/api/lessons').then(r => { if (!r.ok) throw new Error('lessons unavailable'); return r.json(); }), fetch('/api/resources').then(r => { if (!r.ok) throw new Error('resources unavailable'); return r.json(); })]); state.lessons = lessons; state.resources = resources; } catch (error) { try { const [lessons, resources] = await Promise.all([fetch('./content/lessons.json').then(r => r.json()), fetch('./content/library.json').then(r => r.json())]); state.lessons = lessons; state.resources = resources; } catch (fallbackError) { state.lessons = fallbackLessons; state.resources = fallbackResources; } } renderLessons(); renderResources(); }
+    async function loadContent() {
+      const embedded = window.__IMAGINE_CONTENT__;
+      if (embedded && embedded.lessons && embedded.resources && embedded.ages) {
+        state.lessons = embedded.lessons;
+        state.resources = embedded.resources;
+        applyAges(embedded.ages);
+        renderLessons();
+        renderResources();
+        return;
+      }
+      try {
+        const [lessons, resources, ages] = await Promise.all([
+          fetch('/api/lessons').then(r => { if (!r.ok) throw new Error('lessons unavailable'); return r.json(); }),
+          fetch('/api/resources').then(r => { if (!r.ok) throw new Error('resources unavailable'); return r.json(); }),
+          fetch('/api/ages').then(r => { if (!r.ok) throw new Error('ages unavailable'); return r.json(); })
+        ]);
+        state.lessons = lessons;
+        state.resources = resources;
+        applyAges(ages);
+      } catch (error) {
+        try {
+          const [lessons, resources, ages] = await Promise.all([
+            fetch('./content/lessons.json').then(r => r.json()),
+            fetch('./content/library.json').then(r => r.json()),
+            fetch('./content/ages.json').then(r => r.json())
+          ]);
+          state.lessons = lessons;
+          state.resources = resources;
+          applyAges(ages);
+        } catch (fallbackError) {
+          state.lessons = fallbackLessons;
+          state.resources = fallbackResources;
+          applyAges(fallbackAges);
+        }
+      }
+      renderLessons();
+      renderResources();
+    }
 
+    ageTabs.addEventListener('click', event => { const tab = event.target.closest('[data-age]'); if (!tab || tab.dataset.age === state.age) return; state.age = tab.dataset.age; renderAgeTabs(); renderAgePanel(); agePanel.focus({ preventScroll: true }); });
     document.getElementById('searchInput').addEventListener('input', event => { state.query = event.target.value; renderResources(); });
     document.getElementById('filters').addEventListener('click', event => { const button = event.target.closest('.filter'); if (!button) return; document.querySelectorAll('.filter').forEach(item => item.classList.remove('active')); button.classList.add('active'); state.type = button.dataset.type; renderResources(); });
     resourceGrid.addEventListener('click', event => { const button = event.target.closest('[data-save]'); if (!button) return; const id = button.dataset.save; if (!state.user) { showToast('收藏功能需要先开启我的阅读权限'); loginModal.classList.add('open'); return; } state.saved = state.saved.includes(id) ? state.saved.filter(item => item !== id) : [...state.saved, id]; localStorage.setItem('imagine-saved', JSON.stringify(state.saved)); renderResources(); showToast(state.saved.includes(id) ? '已加入你的书架' : '已从书架移除'); });
