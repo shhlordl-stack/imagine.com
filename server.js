@@ -67,6 +67,10 @@ const PUBLIC_FILES = new Set([
   'sanjianke/styles.css',
   'sanjianke/content.js',
   'sanjianke/app.js',
+  'cases/index.html',
+  'cases/styles.css',
+  'cases/content.js',
+  'cases/app.js',
 ]);
 
 function safeStaticPath(urlPath) {
@@ -91,6 +95,11 @@ const server = http.createServer((req, res) => {
 
   if (urlPath.split('?')[0] === '/sanjianke') {
     res.writeHead(308, { Location: `/sanjianke/${urlPath.includes('?') ? `?${urlPath.split('?').slice(1).join('?')}` : ''}` });
+    return res.end();
+  }
+
+  if (urlPath.split('?')[0] === '/cases') {
+    res.writeHead(308, { Location: `/cases/${urlPath.includes('?') ? `?${urlPath.split('?').slice(1).join('?')}` : ''}` });
     return res.end();
   }
 

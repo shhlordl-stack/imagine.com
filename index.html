@@ -40,7 +40,7 @@
     .brand-mark:before, .brand-mark:after { content:""; position:absolute; width: 9px; height:9px; border:2px solid var(--ink); border-radius:50%; background:var(--paper); }
     .brand-mark:before { left: 7px; top: 9px; }
     .brand-mark:after { right: 7px; bottom: 8px; }
-    .nav-links { display:flex; gap: 26px; color: #46565e; font-size: 14px; }
+    .nav-links { display:flex; gap: 22px; color: #46565e; font-size: 13.5px; }
     .nav-links a:hover { color: var(--coral-dark); }
     .nav-actions { display:flex; align-items:center; gap: 10px; }
     .access-pill { display:flex; align-items:center; gap: 7px; padding: 9px 12px; border:1px solid var(--line); background:var(--white); border-radius:999px; color:var(--muted); font-size:12px; }
@@ -233,6 +233,24 @@
     .myth s { display:block; margin-bottom:6px; font-size:13px; color:#f2a795; text-decoration-thickness:1px; }
     .myth p { margin:0; font-size:12px; line-height:1.65; color:#c2ced4; }
     .age-footnote { margin:14px 2px 0; font-size:11px; color:var(--muted); line-height:1.7; }
+    .case-section { background:#fbf8f1; }
+    .case-lead { display:grid; grid-template-columns:1fr auto; align-items:center; gap:28px; padding:32px 36px; margin-bottom:14px; background:var(--ink); color:#f4efe4; border-radius:24px; position:relative; overflow:hidden; transition:transform .2s ease, background .2s ease; }
+    .case-lead:hover { transform:translateY(-3px); background:#243642; }
+    .case-lead:focus-visible { outline:3px solid var(--coral); outline-offset:5px; }
+    .case-lead-kicker { display:block; margin-bottom:9px; font-size:10px; letter-spacing:.2em; color:#e0a892; }
+    .case-lead h3 { margin:0 0 9px; font-size:clamp(26px,3.4vw,38px); line-height:1.15; letter-spacing:-.05em; color:#fff; }
+    .case-lead p { margin:0; max-width:520px; font-size:13px; line-height:1.7; color:#aebbc2; }
+    .case-lead-cta { white-space:nowrap; padding:13px 20px; border:1px solid rgba(255,255,255,.28); border-radius:999px; font-size:12px; color:#fff; }
+    .case-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    .case-card { display:flex; flex-direction:column; gap:9px; min-height:150px; padding:20px 21px; background:var(--white); border:1px solid rgba(23,39,51,.07); border-radius:16px; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    .case-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); border-color:rgba(236,107,86,.35); }
+    .case-card:focus-visible { outline:3px solid var(--coral); outline-offset:3px; }
+    .case-num { font-size:10px; font-weight:800; letter-spacing:.16em; color:var(--coral-dark); }
+    .case-card b { font-size:16px; line-height:1.4; letter-spacing:-.03em; }
+    .case-kicker { font-size:11px; color:var(--muted); }
+    .case-arrow { margin-top:auto; font-size:11px; color:var(--coral-dark); font-weight:700; }
+    @media (max-width:900px) { .case-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:560px) { .case-lead { grid-template-columns:1fr; gap:16px; padding:26px; } .case-lead-cta { justify-self:start; } .case-grid { grid-template-columns:1fr; } .case-card { min-height:0; } }
     @media (max-width:900px) { .age-head { grid-template-columns:1fr; gap:18px; align-items:start; } .interest-grid, .book-grid { grid-template-columns:repeat(2,1fr); } .myth-grid { grid-template-columns:1fr; } }
     @media (max-width:560px) { .age-tab { flex:1 1 100%; min-width:0; } .interest-grid, .book-grid { grid-template-columns:1fr; } .age-head, .myth-panel { padding:24px; } .explain-body { padding:0 18px 18px; } .age-subhead { display:block; } .age-subhead span { display:block; margin-top:3px; } }
     @media (max-width: 900px) { .hero-grid, .manifesto-grid { grid-template-columns:1fr; gap:34px; } .hero-art { min-height:380px; max-width:520px; width:100%; margin:0 auto; } .lesson-grid { grid-template-columns:repeat(2,1fr); } .resource-grid { grid-template-columns:repeat(2,1fr); } .nav-links { display:none; } }
@@ -244,7 +262,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Imagine 首页"><span class="brand-mark"></span>Imagine</a>
-      <nav class="nav-links" aria-label="主导航"><a href="#lessons">心理课</a><a href="#ages">分龄阅读</a><a href="#library">图书资源</a><a href="./sanjianke/index.html">三剑客 ↗</a><a href="#manifesto">关于 Imagine</a></nav>
+      <nav class="nav-links" aria-label="主导航"><a href="#lessons">心理课</a><a href="#cases">案例精读</a><a href="#ages">分龄阅读</a><a href="#library">图书资源</a><a href="./sanjianke/index.html">三剑客 ↗</a><a href="#manifesto">关于 Imagine</a></nav>
       <div class="nav-actions"><span class="access-pill"><i class="status-dot"></i><span id="accessText">公开阅读已开启</span></span><button class="btn secondary" id="loginBtn">进入我的 Imagine</button></div>
     </div>
   </header>
@@ -272,8 +290,24 @@
       <div class="lesson-grid" id="lessonGrid"></div>
     </div></section>
 
+    <section class="section case-section" id="cases"><div class="wrap">
+      <div class="section-head"><div><div class="section-kicker">02 / 案例精读</div><h2>一个人，一章</h2></div><p class="section-intro">六个具体的人，六种机制。每章从场景出发，一路拆到学科与研究证据，最后落到能做的事——像读一本书，而不是刷一篇文章。</p></div>
+      <a class="case-lead" href="./cases/index.html">
+        <div><span class="case-lead-kicker">长篇 · 序 + 六章 + 尾章</span><h3>行为背后</h3><p>不急着评价一个人，先看看他的行为在替他解决什么问题。</p></div>
+        <span class="case-lead-cta">开始阅读 ↗</span>
+      </a>
+      <div class="case-grid">
+        <a class="case-card" href="./cases/index.html#worry"><span class="case-num">第一章</span><b>他还没开始，就已经想了十种失败</b><span class="case-kicker">担忧 · 负强化</span><span class="case-arrow">阅读 ↗</span></a>
+        <a class="case-card" href="./cases/index.html#checking"><span class="case-num">第二章</span><b>她明知道没必要，还是要回去再看一眼</b><span class="case-kicker">强迫 · 不确定</span><span class="case-arrow">阅读 ↗</span></a>
+        <a class="case-card" href="./cases/index.html#impostor"><span class="case-num">第三章</span><b>他被夸的时候，只觉得还没被拆穿</b><span class="case-kicker">归因 · 自我评价</span><span class="case-arrow">阅读 ↗</span></a>
+        <a class="case-card" href="./cases/index.html#attachment"><span class="case-num">第四章</span><b>她不是要秒回，她是要一个“我还在”</b><span class="case-kicker">依恋 · 发展</span><span class="case-arrow">阅读 ↗</span></a>
+        <a class="case-card" href="./cases/index.html#rumination"><span class="case-num">第五章</span><b>他每天都在想，但什么都没开始</b><span class="case-kicker">反刍 · 抑郁</span><span class="case-arrow">阅读 ↗</span></a>
+        <a class="case-card" href="./cases/index.html#self-handicap"><span class="case-num">第六章</span><b>他宁可考砸，也不愿知道自己行不行</b><span class="case-kicker">自我价值 · 动机</span><span class="case-arrow">阅读 ↗</span></a>
+      </div>
+    </div></section>
+
     <section class="section age-section" id="ages"><div class="wrap">
-      <div class="section-head"><div><div class="section-kicker">02 / 分龄入口</div><h2>不同年纪，好奇不同的东西</h2></div><p class="section-intro">同一个问题，六岁、十三岁和十七岁想知道的并不是同一部分。这里按年龄分开：先看兴趣方向，再挑几本书，最后读一篇有趣的解读。</p></div>
+      <div class="section-head"><div><div class="section-kicker">03 / 分龄入口</div><h2>不同年纪，好奇不同的东西</h2></div><p class="section-intro">同一个问题，六岁、十三岁和十七岁想知道的并不是同一部分。这里按年龄分开：先看兴趣方向，再挑几本书，最后读一篇有趣的解读。</p></div>
       <div class="age-tabs" id="ageTabs" role="tablist" aria-label="选择年龄段"></div>
       <div class="age-panel" id="agePanel" role="tabpanel" tabindex="0"></div>
       <div class="myth-panel" id="mythPanel"></div>
@@ -281,18 +315,18 @@
     </div></section>
 
     <section class="section library-section" id="library"><div class="wrap">
-      <div class="section-head"><div><div class="section-kicker">03 / OPEN SHELF</div><h2>给好奇心一座书架</h2></div><p class="section-intro">这里优先收录公共领域、开放教材与合法公开课程。我们借鉴数字图书馆的探索感，但不提供未经授权的盗版内容。</p></div>
+      <div class="section-head"><div><div class="section-kicker">04 / OPEN SHELF</div><h2>给好奇心一座书架</h2></div><p class="section-intro">这里优先收录公共领域、开放教材与合法公开课程。我们借鉴数字图书馆的探索感，但不提供未经授权的盗版内容。</p></div>
       <div class="library-tools"><div class="search"><input id="searchInput" type="search" placeholder="搜索书名、主题或平台" aria-label="搜索资源" /></div><div class="filters" id="filters"><button class="filter active" data-type="全部">全部</button><button class="filter" data-type="开放教材">开放教材</button><button class="filter" data-type="公共领域">公共领域</button><button class="filter" data-type="公开课程">公开课程</button><button class="filter" data-type="知识索引">知识索引</button></div></div>
       <div class="resource-grid" id="resourceGrid"></div>
     </div></section>
 
     <section class="manifesto" id="manifesto"><div class="wrap manifesto-grid">
-      <div><div class="section-kicker">04 / WHY IMAGINE</div><h2 class="manifesto-title">知识不该让人更紧张，<span>而是更自由。</span></h2></div>
+      <div><div class="section-kicker">05 / WHY IMAGINE</div><h2 class="manifesto-title">知识不该让人更紧张，<span>而是更自由。</span></h2></div>
       <div><p class="manifesto-copy">我们相信，好的心理学内容不应该只在论文和诊室里出现。它可以用日常语言抵达你，既不把每种情绪都病理化，也不把所有问题都归因于“想开一点”。</p><div class="principles"><div class="principle"><b>讲清楚，不吓人</b><p>区分科普、诊断与治疗建议，尊重每个人的复杂处境。</p></div><div class="principle"><b>开放，但不失出处</b><p>链接到合法公开的书目、课程与机构页面，方便继续求证。</p></div><div class="principle"><b>给行动，也给余地</b><p>每篇内容只提供一个小入口，不要求你一次解决全部人生。</p></div><div class="principle"><b>隐私优先</b><p>阅读偏好只保存在当前设备；公开浏览无需提交个人信息。</p></div></div><div class="permission-strip"><div><strong>访问权限已开启</strong><small>公开读者可浏览全部心理课与开放资源；收藏功能在登录后启用。</small></div><span class="permission-chip">Public / Reader</span></div></div>
     </div></section>
   </main>
 
-  <footer><div class="wrap footer-inner"><div><div class="footer-brand">Imagine</div><div>给思考留一点呼吸的地方。</div></div><div class="footer-links"><a href="#lessons">心理课</a><a href="#ages">分龄阅读</a><a href="#library">开放书架</a><a href="#manifesto">阅读原则</a><a href="mailto:hello@imagine.com">联系编辑部</a></div></div></footer>
+  <footer><div class="wrap footer-inner"><div><div class="footer-brand">Imagine</div><div>给思考留一点呼吸的地方。</div></div><div class="footer-links"><a href="#lessons">心理课</a><a href="./cases/index.html">案例精读</a><a href="#ages">分龄阅读</a><a href="#library">开放书架</a><a href="#manifesto">阅读原则</a><a href="mailto:hello@imagine.com">联系编辑部</a></div></div></footer>
 
   <div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="modal-close" id="closeModal" aria-label="关闭">×</button><div class="section-kicker">MY IMAGINE</div><h3 id="modalTitle">把喜欢的内容留住</h3><p>登录后可以收藏书目与心理课。演示模式会把信息保存在当前设备，不会上传到服务器。</p><label for="loginName">你的昵称</label><input id="loginName" type="text" placeholder="例如：Mina" maxlength="20" /><label>选择访问身份</label><div class="role-list"><button class="role-option active" data-role="读者">读者</button><button class="role-option" data-role="编辑">编辑</button><button class="role-option" data-role="研究者">研究者</button></div><button class="btn coral" id="confirmLogin">开启我的阅读权限</button></div></div>
   <div class="toast" id="toast"></div>
