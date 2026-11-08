@@ -11,6 +11,7 @@ const routes = {
   '/api/lessons': path.join(DATA_DIR, 'lessons.json'),
   '/api/resources': path.join(DATA_DIR, 'library.json'),
   '/api/ages': path.join(DATA_DIR, 'ages.json'),
+  '/api/unclench': path.join(DATA_DIR, 'unclench.json'),
 };
 
 const contentTypes = {
@@ -49,7 +50,13 @@ function sendServerRenderedHome(res) {
     const lessons = JSON.parse(fs.readFileSync(routes['/api/lessons'], 'utf8'));
     const resources = JSON.parse(fs.readFileSync(routes['/api/resources'], 'utf8'));
     const ages = JSON.parse(fs.readFileSync(routes['/api/ages'], 'utf8'));
-    const embedded = JSON.stringify({ lessons, resources, ages }).replace(/</g, '\\u003c');
+    let unclench = null;
+    try {
+      unclench = JSON.parse(fs.readFileSync(routes['/api/unclench'], 'utf8'));
+    } catch {
+      unclench = null;
+    }
+    const embedded = JSON.stringify({ lessons, resources, ages, unclench }).replace(/</g, '\\u003c');
     const body = html.replace('</head>', `<script>window.__IMAGINE_CONTENT__=${embedded};</script></head>`);
     send(res, 200, body, 'text/html; charset=utf-8');
   } catch (error) {
@@ -62,6 +69,7 @@ const PUBLIC_FILES = new Set([
   'content/lessons.json',
   'content/library.json',
   'content/ages.json',
+  'content/unclench.json',
   'imagine-static-full.png',
   'sanjianke/index.html',
   'sanjianke/styles.css',
@@ -71,6 +79,9 @@ const PUBLIC_FILES = new Set([
   'cases/styles.css',
   'cases/content.js',
   'cases/app.js',
+  'unclench/index.html',
+  'unclench/styles.css',
+  'unclench/app.js',
 ]);
 
 function safeStaticPath(urlPath) {
@@ -93,22 +104,21 @@ const server = http.createServer((req, res) => {
     return send(res, 405, 'Method Not Allowed');
   }
 
-  if (urlPath.split('?')[0] === '/sanjianke') {
-    res.writeHead(308, { Location: `/sanjianke/${urlPath.includes('?') ? `?${urlPath.split('?').slice(1).join('?')}` : ''}` });
+  const pathOnly = urlPath.split('?')[0];
+  const query = urlPath.includes('?') ? `?${urlPath.split('?').slice(1).join('?')}` : '';
+
+  // 分站目录统一补斜杠，避免相对路径解析错位
+  if (['/sanjianke', '/cases', '/unclench'].includes(pathOnly)) {
+    res.writeHead(308, { Location: `${pathOnly}/${query}` });
     return res.end();
   }
 
-  if (urlPath.split('?')[0] === '/cases') {
-    res.writeHead(308, { Location: `/cases/${urlPath.includes('?') ? `?${urlPath.split('?').slice(1).join('?')}` : ''}` });
-    return res.end();
-  }
-
-  if (urlPath.split('?')[0] === '/health') {
+  if (pathOnly === '/health') {
     return send(res, 200, JSON.stringify({ ok: true, service: 'imagine' }), 'application/json; charset=utf-8');
   }
 
-  if (routes[urlPath.split('?')[0]]) {
-    return sendJson(res, routes[urlPath.split('?')[0]]);
+  if (routes[pathOnly]) {
+    return sendJson(res, routes[pathOnly]);
   }
 
   const filePath = safeStaticPath(urlPath);

@@ -1,0 +1,41 @@
+{
+  "id": "unclench",
+  "name": "松绑",
+  "en": "UNCLENCH",
+  "path": "./unclench/index.html",
+  "status": "live",
+  "updated": "2026-11-08",
+  "kicker": "IMAGINE LAB / 身体与关系",
+  "title": "松绑：身体里那阵说不清的紧绷",
+  "summary": "五道锁 · 2 分钟自测 · 90 秒呼吸 · 换句卡 · 求助路径。不评判，不诊断，不追踪。",
+  "intro": "关于当代年轻人性压力的一份自查与松绑指南：先把压力拆成五种，再给出今晚就能用的办法。",
+  "readingMinutes": 12,
+  "tags": ["心理科普", "身体与关系", "自助工具"],
+  "sections": [
+    { "num": "01", "id": "locks", "title": "困境", "sub": "五道锁：信息 / 时间 / 语言 / 表现 / 羞耻" },
+    { "num": "02", "id": "facts", "title": "背景", "sub": "三个数字，以及它们的口径" },
+    { "num": "03", "id": "quiz", "title": "自测", "sub": "10 题定位压力主要来自哪一格" },
+    { "num": "04", "id": "tools", "title": "松绑", "sub": "五个可交互的自助工具" },
+    { "num": "05", "id": "know", "title": "知识", "sub": "同意 / 避孕 / 被夸大的数字 / 就医信号" },
+    { "num": "06", "id": "help", "title": "求助", "sub": "12356 与线下就医路径" },
+    { "num": "07", "id": "boundary", "title": "边界", "sub": "这一页不做什么" }
+  ],
+  "tools": [
+    { "id": "breath", "name": "90 秒呼吸", "note": "4-2-6 节律，先让身体降下来" },
+    { "id": "swap", "name": "换句卡", "note": "六张认知重估卡，点开翻面" },
+    { "id": "paper", "name": "写下来烧掉", "note": "给反刍一个边界，内容不出本机" },
+    { "id": "worry", "name": "担忧窗口", "note": "每天固定 5 分钟，只在那时想" },
+    { "id": "scan", "name": "身体扫描", "note": "肩颈 / 腹部 / 下颌，收紧再松开" }
+  ],
+  "help": {
+    "hotline": "12356",
+    "hotlineName": "全国统一心理援助热线",
+    "operator": "国家卫生健康委",
+    "note": "提供心理健康教育、心理咨询、心理疏导与危机干预；危机状态请直接拨打 120。"
+  },
+  "privacy": {
+    "tracking": false,
+    "storage": "none",
+    "note": "自测答案与写下的文字只存在于页面内存，不写 localStorage、不上报、刷新即清空。"
+  }
+}

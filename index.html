@@ -41,6 +41,8 @@
     .brand-mark:before { left: 7px; top: 9px; }
     .brand-mark:after { right: 7px; bottom: 8px; }
     .nav-links { display:flex; gap: 22px; color: #46565e; font-size: 13.5px; }
+    .nav-links a { white-space: nowrap; }
+    @media (max-width:1180px) and (min-width:901px) { .nav { gap:16px; } .nav-links { gap:13px; font-size:13px; } .nav-actions .access-pill { display:none; } }
     .nav-links a:hover { color: var(--coral-dark); }
     .nav-actions { display:flex; align-items:center; gap: 10px; }
     .access-pill { display:flex; align-items:center; gap: 7px; padding: 9px 12px; border:1px solid var(--line); background:var(--white); border-radius:999px; color:var(--muted); font-size:12px; }
@@ -174,6 +176,36 @@
     .portal-cta { background:var(--white); border:1px solid #d3c4a7; border-radius:999px; padding:12px 18px; font-size:12px; white-space:nowrap; }
     @media(max-width:700px) { .portal-link { grid-template-columns:1fr auto; gap:16px; padding:24px; } .portal-symbol { display:none; } .portal-copy h2 { font-size:23px; } .portal-copy p { font-size:11px; } .portal-cta { font-size:11px; padding:10px 12px; } }
     @media(max-width:430px) { .portal-link { grid-template-columns:1fr; } .portal-cta { justify-self:start; } }
+    /* 分站入口：影像解构（暗色卡片，呼应分站视觉） */
+    .portal-stack { display:flex; flex-direction:column; gap:14px; }
+    .portal-link.film { background:linear-gradient(104deg,#171110,#261815 58%,#1b1311); border-color:#3b2b26; }
+    .portal-link.film:hover { background:linear-gradient(104deg,#1e1513,#33201c 58%,#241715); }
+    .portal-link.film .portal-copy small { color:#cfa04b; }
+    .portal-link.film .portal-copy h2 { color:#f8f2e9; font-size:25px; margin-bottom:7px; }
+    .portal-link.film .portal-copy p { color:#a89a8c; }
+    .portal-link.film .portal-cta { background:rgba(243,238,231,.09); border-color:rgba(243,238,231,.24); color:#f8f2e9; }
+    .film-symbol { transform:rotate(-6deg); gap:5px; padding:6px 9px; background:#2b1a17; border:1px solid #4a332c; border-radius:9px; align-items:center; }
+    .film-symbol i { width:15px; height:34px; border:0; border-radius:3px; background:linear-gradient(180deg,#c8324a,#7d1f2e); }
+    .film-symbol i:nth-child(2) { height:34px; background:linear-gradient(180deg,#cfa04b,#8a6a2c); }
+    .film-symbol i:nth-child(3) { height:34px; background:linear-gradient(180deg,#e0495f,#8f2436); }
+    @media(max-width:700px) { .portal-link.film .portal-copy h2 { font-size:20px; } }
+    /* 分站入口：松绑（暗色·青绿，呼应身体与关系分站） */
+    .portal-link.unclench { background:linear-gradient(104deg,#0f1a1c,#17262a 58%,#111c1f); border-color:#2b3f3d; }
+    .portal-link.unclench:hover { background:linear-gradient(104deg,#131f22,#1d3034 58%,#152225); }
+    .portal-link.unclench .portal-copy small { color:#8fbba5; }
+    .portal-link.unclench .portal-copy h2 { color:#eef1ec; font-size:25px; margin-bottom:7px; }
+    .portal-link.unclench .portal-copy p { color:#93a4a3; }
+    .portal-link.unclench .portal-cta { background:rgba(238,241,236,.07); border-color:rgba(238,241,236,.22); color:#eef1ec; }
+    .portal-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:11px; }
+    .portal-chips span { display:inline-flex; align-items:center; gap:5px; font-size:10px; line-height:1; padding:5px 9px; border-radius:999px; border:1px solid rgba(143,187,165,.26); background:rgba(143,187,165,.07); color:#9dbfae; white-space:nowrap; }
+    .portal-chips span b { font-weight:600; color:#7fa894; font-size:9px; letter-spacing:.06em; }
+    .portal-chips:empty { display:none; }
+    .unclench-symbol { position:relative; width:58px; height:58px; display:grid; place-items:center; transform:rotate(-8deg); }
+    .unclench-symbol i { position:absolute; border-radius:50%; border:1px solid rgba(143,187,165,.34); display:block; }
+    .unclench-symbol i:nth-child(1) { width:54px; height:54px; }
+    .unclench-symbol i:nth-child(2) { width:34px; height:34px; border-color:rgba(231,169,97,.46); }
+    .unclench-symbol i:nth-child(3) { width:12px; height:12px; background:rgba(231,169,97,.8); border:0; }
+    @media(max-width:700px) { .portal-link.unclench .portal-copy h2 { font-size:19px; } .unclench-symbol { display:none; } }
     .age-section { background: #f2eee3; }
     .age-tabs { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:20px; }
     .age-tab { display:flex; flex-direction:column; gap:1px; align-items:flex-start; min-width:150px; padding:13px 20px; border-radius:16px; border:1px solid var(--line); background:rgba(255,253,249,.72); color:var(--muted); text-align:left; transition:transform .18s ease, background .18s ease, border-color .18s ease; }
@@ -262,7 +294,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Imagine 首页"><span class="brand-mark"></span>Imagine</a>
-      <nav class="nav-links" aria-label="主导航"><a href="#lessons">心理课</a><a href="#cases">案例精读</a><a href="#ages">分龄阅读</a><a href="#library">图书资源</a><a href="./sanjianke/index.html">三剑客 ↗</a><a href="#manifesto">关于 Imagine</a></nav>
+      <nav class="nav-links" aria-label="主导航"><a href="#lessons">心理课</a><a href="#cases">案例精读</a><a href="#ages">分龄阅读</a><a href="#library">图书资源</a><a href="./unclench/index.html">松绑 ↗</a><a href="./sanjianke/index.html">三剑客 ↗</a><a href="../rouputuan-lab/index.html">影像解构 ↗</a><a href="#manifesto">关于 Imagine</a></nav>
       <div class="nav-actions"><span class="access-pill"><i class="status-dot"></i><span id="accessText">公开阅读已开启</span></span><button class="btn secondary" id="loginBtn">进入我的 Imagine</button></div>
     </div>
   </header>
@@ -283,7 +315,7 @@
       </div>
     </div></section>
 
-    <section class="portal-section" aria-label="三剑客探索入口"><div class="wrap"><a class="portal-link" href="./sanjianke/index.html"><span class="portal-symbol" aria-hidden="true"><i></i><i></i><i></i></span><div class="portal-copy"><small>IMAGINE / 好奇心的另一扇门</small><h2>出发，去遇见「三剑客」。</h2><p>过去、现在、未来三位向导，带你探索国内外的文化、科学与生活。</p></div><span class="portal-cta">打开探索分站 ↗</span></a></div></section>
+    <section class="portal-section" aria-label="分站入口"><div class="wrap portal-stack"><a class="portal-link" href="./sanjianke/index.html"><span class="portal-symbol" aria-hidden="true"><i></i><i></i><i></i></span><div class="portal-copy"><small>IMAGINE / 好奇心的另一扇门</small><h2>出发，去遇见「三剑客」。</h2><p>过去、现在、未来三位向导，带你探索国内外的文化、科学与生活。</p></div><span class="portal-cta">打开探索分站 ↗</span></a><a class="portal-link film" href="../rouputuan-lab/index.html"><span class="portal-symbol film-symbol" aria-hidden="true"><i></i><i></i><i></i></span><div class="portal-copy"><small>IMAGINE LAB / 影像研究分站</small><h2>解构《3D 肉蒲团》：一部三级片如何改写港片票房史</h2><p>源流 · 三幕叙事 · 3D 技术护城河 · 4108 万票房账本 · 三重争议。只谈结构，不放画面。</p></div><span class="portal-cta">进入解构分站 ↗</span></a><a class="portal-link unclench" id="portalUnclench" href="./unclench/index.html"><span class="unclench-symbol" aria-hidden="true"><i></i><i></i><i></i></span><div class="portal-copy"><small data-site="kicker">IMAGINE LAB / 身体与关系</small><h2 data-site="title">松绑：身体里那阵说不清的紧绷</h2><p data-site="summary">五道锁 · 2 分钟自测 · 90 秒呼吸 · 换句卡 · 求助路径。不评判，不诊断，不追踪。</p><div class="portal-chips" id="unclenchChips" aria-hidden="true"></div></div><span class="portal-cta">进入松绑分站 ↗</span></a></div></section>
 
     <section class="section" id="lessons"><div class="wrap">
       <div class="section-head"><div><div class="section-kicker">01 / 心理课</div><h2>先从理解自己开始</h2></div><p class="section-intro">没有考试，也不要求你立刻变得更好。每一篇只讲清楚一个日常困惑，再留一个可以带走的小练习。</p></div>
@@ -326,7 +358,7 @@
     </div></section>
   </main>
 
-  <footer><div class="wrap footer-inner"><div><div class="footer-brand">Imagine</div><div>给思考留一点呼吸的地方。</div></div><div class="footer-links"><a href="#lessons">心理课</a><a href="./cases/index.html">案例精读</a><a href="#ages">分龄阅读</a><a href="#library">开放书架</a><a href="#manifesto">阅读原则</a><a href="mailto:hello@imagine.com">联系编辑部</a></div></div></footer>
+  <footer><div class="wrap footer-inner"><div><div class="footer-brand">Imagine</div><div>给思考留一点呼吸的地方。</div></div><div class="footer-links"><a href="#lessons">心理课</a><a href="./cases/index.html">案例精读</a><a href="#ages">分龄阅读</a><a href="#library">开放书架</a><a href="./unclench/index.html">松绑</a><a href="./sanjianke/index.html">三剑客</a><a href="../rouputuan-lab/index.html">影像解构</a><a href="#manifesto">阅读原则</a><a href="mailto:hello@imagine.com">联系编辑部</a></div></div></footer>
 
   <div class="modal-backdrop" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="modal-close" id="closeModal" aria-label="关闭">×</button><div class="section-kicker">MY IMAGINE</div><h3 id="modalTitle">把喜欢的内容留住</h3><p>登录后可以收藏书目与心理课。演示模式会把信息保存在当前设备，不会上传到服务器。</p><label for="loginName">你的昵称</label><input id="loginName" type="text" placeholder="例如：Mina" maxlength="20" /><label>选择访问身份</label><div class="role-list"><button class="role-option active" data-role="读者">读者</button><button class="role-option" data-role="编辑">编辑</button><button class="role-option" data-role="研究者">研究者</button></div><button class="btn coral" id="confirmLogin">开启我的阅读权限</button></div></div>
   <div class="toast" id="toast"></div>
@@ -418,6 +450,31 @@
       renderResources();
     }
 
+    async function hydrateSites() {
+      const card = document.getElementById('portalUnclench');
+      if (!card) return;
+      let site = (window.__IMAGINE_CONTENT__ && window.__IMAGINE_CONTENT__.unclench) || null;
+      if (!site) {
+        try {
+          const res = await fetch('/api/unclench');
+          if (!res.ok) throw new Error('unclench unavailable');
+          site = await res.json();
+        } catch (error) {
+          try { site = await (await fetch('./content/unclench.json')).json(); } catch (fallbackError) { site = null; }
+        }
+      }
+      if (!site) return;
+      const write = (key, value) => { const el = card.querySelector(`[data-site="${key}"]`); if (el && value) el.textContent = value; };
+      write('kicker', site.kicker);
+      write('title', site.title);
+      write('summary', site.summary);
+      if (site.path) card.setAttribute('href', site.path);
+      const chips = document.getElementById('unclenchChips');
+      if (chips && Array.isArray(site.sections)) {
+        chips.innerHTML = site.sections.map(section => `<span><b>${section.num}</b>${section.title}</span>`).join('');
+      }
+    }
+
     ageTabs.addEventListener('click', event => { const tab = event.target.closest('[data-age]'); if (!tab || tab.dataset.age === state.age) return; state.age = tab.dataset.age; renderAgeTabs(); renderAgePanel(); agePanel.focus({ preventScroll: true }); });
     document.getElementById('searchInput').addEventListener('input', event => { state.query = event.target.value; renderResources(); });
     document.getElementById('filters').addEventListener('click', event => { const button = event.target.closest('.filter'); if (!button) return; document.querySelectorAll('.filter').forEach(item => item.classList.remove('active')); button.classList.add('active'); state.type = button.dataset.type; renderResources(); });
@@ -427,7 +484,7 @@
     document.getElementById('closeModal').addEventListener('click', () => loginModal.classList.remove('open'));
     loginModal.addEventListener('click', event => { if (event.target === loginModal) loginModal.classList.remove('open'); const role = event.target.closest('[data-role]'); if (role) { document.querySelectorAll('.role-option').forEach(item => item.classList.remove('active')); role.classList.add('active'); } });
     document.getElementById('confirmLogin').addEventListener('click', () => { const name = document.getElementById('loginName').value.trim() || 'Imagine 读者'; const role = document.querySelector('.role-option.active').dataset.role; state.user = { name, role }; localStorage.setItem('imagine-user', JSON.stringify(state.user)); updateAccess(); loginModal.classList.remove('open'); showToast(`欢迎，${name}。你的阅读权限已开启`); });
-    updateAccess(); loadContent();
+    updateAccess(); loadContent(); hydrateSites();
   </script>
 </body>
 </html>
