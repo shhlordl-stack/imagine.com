@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0a0a0c" />
+<meta name="description" content="《3D肉蒲团之极乐宝鉴》影像解构：源流、叙事、3D 技术、票房市场与争议。公开资料整理的影视研究型页面，不含任何影片内容。" />
+<title>解构 · 3D肉蒲团之极乐宝鉴</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="readbar" aria-hidden="true"><i id="readbar-fill"></i></div>
+
+<!-- 开场：放映仪式（每次会话只播一次，可跳过） -->
+<div class="curtain-intro" id="intro" aria-hidden="true">
+  <div class="ci-panel left"></div>
+  <div class="ci-panel right"></div>
+  <div class="ci-content">
+    <div class="ci-leader" aria-hidden="true"><span class="ci-sweep"></span><i class="ci-cross"></i><p class="ci-count" id="ciCount">3</p></div>
+    <p class="ci-kicker">IMAGINE LAB <i>/</i> 影像研究第 001 号</p>
+    <h2 class="ci-title">3D 肉蒲团</h2>
+    <p class="ci-sub">一部三级片，如何改写港产片的票房史</p>
+    <span class="ci-rule"></span>
+    <p class="ci-hint">点击任意处进入 · ESC 跳过</p>
+  </div>
+</div>
+<div class="flash" id="flash" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">解</span>
+      <span class="brand-text">肉蒲团<i>FILM DECONSTRUCTION</i></span>
+    </a>
+    <nav class="links" aria-label="章节导航">
+      <a href="#origin" data-nav>源流</a>
+      <a href="#story" data-nav>叙事</a>
+      <a href="#tech" data-nav>技术</a>
+      <a href="#market" data-nav>市场</a>
+      <a href="#debate" data-nav>争议</a>
+      <a href="#player" data-nav>播放器</a>
+    </nav>
+    <a class="back" href="../index.html" title="返回本地 Imagine 站点">
+      <span class="dot"></span> 返回 Imagine
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+      <div class="curtain"></div>
+    </div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="line"></span>影像研究 / 类型片解剖</p>
+        <h1>
+          <span class="h1-cn">3D 肉蒲团</span>
+          <span class="h1-sub">之极乐宝鉴 · 一部三级片如何改写港片票房史</span>
+        </h1>
+        <p class="hook">
+          <span class="hook-year">2011</span>
+          在此之前，从来没有一部三级片拿过香港年度票房冠军。<em>它拿了。</em>
+        </p>
+        <p class="lede">
+          它是一部古装情色片，也是一个工业样本：用 3D 实拍做差异化、用影院体验对抗盗版、
+          用一部清代小说把停摆多年的类型重新推回院线。这里拆开它的源流、叙事、技术、
+          账本与争议——只谈结构，不放画面。
+        </p>
+        <div class="hero-meta">
+          <span>2011 · 香港</span><span class="sep">/</span>
+          <span>导演 孙立基</span><span class="sep">/</span>
+          <span>监制 萧若元 · 萧定一</span><span class="sep">/</span>
+          <span>III 级</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#origin">开始解构</a>
+          <a class="btn ghost" href="#player">播放器组件 Demo</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="关键数据">
+        <div class="stamp" aria-label="三级影片">
+          <b>III</b>
+          <small>只准 18 岁以上</small>
+        </div>
+        <div class="card-tag">KEY FIGURES</div>
+        <div class="stat">
+          <b><i class="cnt" data-to="4108">4,108</i><span>万</span></b>
+          <small>香港票房（港元）</small>
+        </div>
+        <div class="stat">
+          <b><i class="cnt" data-to="1842">1,842</i><span>万</span></b>
+          <small>被它打破的前纪录</small>
+        </div>
+        <div class="stat">
+          <b><i class="cnt" data-to="1">1</i><span>亿+</span></b>
+          <small>全球收入（港元）</small>
+        </div>
+        <div class="stat">
+          <b>1<span>st</span></b>
+          <small>首部夺年度冠军的三级片</small>
+        </div>
+        <p class="card-note">数据来源见页脚，口径差异已标注。</p>
+      </aside>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true"><span></span>SCROLL</div>
+  </section>
+
+  <!-- ============ 01 源流 ============ -->
+  <section class="sec" id="origin" data-num="01">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="num">01</span>
+        <div>
+          <h2>源流：从李渔的账本，到院线的账本</h2>
+          <p class="sub">同一个文本，三百多年里被反复重写。每一次重写，改的都是当时的道德账本。</p>
+        </div>
+      </div>
+
+      <div class="origin-grid">
+        <article class="text-card reveal">
+          <h3>底本：一部章回体的“劝惩”小说</h3>
+          <p>
+            清初文人李渔（1611—1680）的《肉蒲团》是章回体小说，主角未央生以“阅历天下”为名纵游，
+            与铁玉香成婚后仍不收敛，最终卷入权贵圈套，落得因果清算。小说的叙事骨架其实是一套
+            <em>劝惩结构</em>：先用大量篇幅铺陈欲望，再用结局完成惩戒。
+          </p>
+          <p>
+            这套“先纵后惩”的骨架，是它能在不同年代被反复改编的根本原因——它同时给了
+            商业片两样东西：<strong>足够的展示空间</strong>，和<strong>一个道德上说得过去的收尾</strong>。
+          </p>
+        </article>
+
+        <article class="text-card reveal">
+          <h3>片名：一次粤语谐音的改写</h3>
+          <p>
+            因为粤语里“肉”与“玉”同音，香港片名长期写作《玉蒲团》。这不是笔误，而是一种
+            本地化的命名策略：既保留原著的辨识度，又让片名在粤语观众口中更顺。
+          </p>
+          <p>
+            2011 年这版把“肉”字拿回来、并把 <em>3D</em> 直接写进片名——片名本身就是
+            广告位，宣告这次重拍的卖点是技术而不是文本。
+          </p>
+        </article>
+      </div>
+
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="tl-year">清初</span>
+          <div class="tl-body">
+            <h4>李渔《肉蒲团》</h4>
+            <p>章回体小说成书，确立“纵欲—清算”的叙事骨架与人物关系：未央生、铁玉香、权老实、赛昆仑、孤峰和尚。</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-year">1980s</span>
+          <div class="tl-body">
+            <h4>港产艳情片的类型化阶段</h4>
+            <p>邵氏以来的古装艳情传统与市井喜剧合流，《足本玉蒲团》等片把原著当作可反复开采的公共素材。</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-year">1991</span>
+          <div class="tl-body">
+            <h4>《玉蒲团之偷情宝鉴》</h4>
+            <p>麦当杰执导、麦当雄监制、萧若元参与编剧与监制。香港票房 18,424,224 港元，此后二十年稳坐港产三级片票房纪录。</p>
+          </div>
+        </li>
+        <li class="reveal is-key">
+          <span class="tl-year">2011</span>
+          <div class="tl-body">
+            <h4>《3D 肉蒲团之极乐宝鉴》</h4>
+            <p>孙立基执导，萧若元监制兼编剧，萧定一的中国 3D 数码娱乐出品——该公司首部电影。4 月 13 日台湾首映、4 月 14 日香港上映。</p>
+          </div>
+        </li>
+        <li class="reveal">
+          <span class="tl-year">2021</span>
+          <div class="tl-body">
+            <h4>128 分钟“10 周年萧若元版本”</h4>
+            <p>以监制当年的初剪版为基础重制，收入影院版未见的段落。一部类型片在十年后仍有人愿意为“另一个剪辑”付费，本身就是稀缺性资产。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 02 叙事 ============ -->
+  <section class="sec alt" id="story" data-num="02">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="num">02</span>
+        <div>
+          <h2>叙事：三幕骨架与它被改动的重心</h2>
+          <p class="sub">同一骨架，1991 版偏向荒诞喜剧，2011 版把砝码压在悲剧与暴力上。</p>
+        </div>
+      </div>
+
+      <div class="acts">
+        <article class="act reveal">
+          <span class="act-no">ACT I</span>
+          <h3>纵游</h3>
+          <p>以“阅历”为名的行动引擎启动。婚姻、誓言、伦理都被处理成可被绕开的障碍物，观众被允许跟着主角一路向前。</p>
+          <div class="act-bar"><i style="--w:34%"></i></div>
+          <small>功能：建立欲望驱动，铺设展示空间</small>
+        </article>
+        <article class="act reveal">
+          <span class="act-no">ACT II</span>
+          <h3>圈套</h3>
+          <p>个人欲望撞上权力结构。宁王一线把私人故事拉进政治与阶层，主角从主动者变成被设计者。</p>
+          <div class="act-bar"><i style="--w:41%"></i></div>
+          <small>功能：制造转折，把“享乐”翻译成“代价”</small>
+        </article>
+        <article class="act reveal">
+          <span class="act-no">ACT III</span>
+          <h3>清算</h3>
+          <p>铁玉香舍身相救，酷刑段落接管叙事。情色退场，暴力登场，收束在惩戒与救赎的旧框架里。</p>
+          <div class="act-bar"><i style="--w:25%"></i></div>
+          <small>功能：完成道德结算，也完成类型越界</small>
+        </article>
+      </div>
+
+      <div class="cast-strip reveal">
+        <div class="cast-item"><b>叶山豪</b><span>未央生</span></div>
+        <div class="cast-item"><b>蓝燕</b><span>铁玉香</span></div>
+        <div class="cast-item"><b>雷凯欣</b><span>主要角色</span></div>
+        <div class="cast-item"><b>原纱央莉</b><span>主要角色</span></div>
+        <div class="cast-item"><b>周防雪子</b><span>主要角色</span></div>
+        <div class="cast-item note"><b>中日合演</b><span>跨市场选角，是当年发行策略的一部分</span></div>
+      </div>
+
+      <div class="quote reveal">
+        <p>“它真正改写的不是文本，而是<strong>类型片的融资方式</strong>——先用技术故事说服资本市场，再用争议说服观众进场。”</p>
+        <span>— 本页论点</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 技术 ============ -->
+  <section class="sec" id="tech" data-num="03">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="num">03</span>
+        <div>
+          <h2>技术：3D 在这里不是炫技，是护城河</h2>
+          <p class="sub">全片 3D 实拍，宣传口径是“全球首部 3D 情色电影”。但技术选择背后的商业动机更值得看。</p>
+        </div>
+      </div>
+
+      <div class="tech-layout">
+        <div class="tech-copy reveal">
+          <div class="point">
+            <h4><i>01</i>为什么是 3D</h4>
+            <p>
+              2010 年前后正是 3D 影院扩张期，票价溢价明显。对这个类型来说，3D 提供了三重好处：
+              <strong>与盗版形成体验差</strong>（家里看不到立体效果）、
+              <strong>与同类片形成区隔</strong>（技术话题本身就是新闻）、
+              <strong>给资本市场一个可讲的故事</strong>（出品方是港股上市公司，影片是其首部作品）。
+            </p>
+          </div>
+          <div class="point">
+            <h4><i>02</i>实拍 3D 的代价</h4>
+            <p>
+              双机立体摄影意味着机身庞大、机位受限、灯位必须避开镜面反射，近景与浅景深的调度难度大幅上升。
+              结果是：<em>景深被压平、前景遮挡被大量使用</em>——纱、帘、烛、水，都成了制造“出屏感”的工具。
+              这也是本片美术风格偏舞台化、层次靠前景堆叠的技术原因。
+            </p>
+          </div>
+          <div class="point">
+            <h4><i>03</i>成本回收的结构</h4>
+            <p>
+              据 2011 年 3 月上映前的公开报道，台湾、韩国、新加坡、澳大利亚、新西兰等地的发行权
+              已售出逾 1000 万港元，出品方称已覆盖大部分制作成本。也就是说——
+              <strong>它在香港开画之前，账面上就接近安全了</strong>。院线票房是利润，不是救命钱。
+            </p>
+          </div>
+        </div>
+
+        <div class="tech-demo reveal">
+          <div class="demo-head">
+            <span>立体视觉原理演示</span>
+            <button class="toggle" id="anaglyph-btn" aria-pressed="false">红蓝立体 关</button>
+          </div>
+          <div class="stage" id="stage" aria-hidden="true">
+            <div class="stage-vignette"></div>
+            <div class="candle c1"></div>
+            <div class="candle c2"></div>
+            <div class="stage-curtain left"></div>
+            <div class="stage-curtain right"></div>
+            <div class="stage-floor"></div>
+            <div class="stage-figure"></div>
+            <div class="stage-text">双机位视差</div>
+          </div>
+          <p class="demo-note">
+            纯 CSS 示意图，与影片画面无关。开启后左右眼通道分离，模拟红蓝眼镜下的重影——
+            这正是 3D 电影“无法被普通录屏盗走”的那部分价值。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 市场 ============ -->
+  <section class="sec alt" id="market" data-num="04">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="num">04</span>
+        <div>
+          <h2>市场：一次教科书级的“争议营销”</h2>
+          <p class="sub">它拿下的不是某个小分类的纪录，而是 2011 年全部港产片的年度冠军。</p>
+        </div>
+      </div>
+
+      <div class="market-grid">
+        <div class="chart-card reveal">
+          <div class="chart-title">香港票房对比 <span>港元</span></div>
+          <div class="bars">
+            <div class="bar-row">
+              <span class="bar-label">1991 · 玉蒲团之偷情宝鉴</span>
+              <div class="bar-track"><i class="bar-fill" data-w="45"><b>1842 万</b></i></div>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">2011 · 3D 肉蒲团</span>
+              <div class="bar-track"><i class="bar-fill hot" data-w="100"><b>4108 万</b></i></div>
+            </div>
+          </div>
+          <p class="chart-note">另有 4170 万港元的统计口径，差异来自计价与结算时间；本页采用监制 2011 年 6 月公布并广泛引用的 4108 万。</p>
+        </div>
+
+        <div class="market-list reveal">
+          <div class="m-item"><b>年度冠军</b><p>成为第一部拿下香港年度本土票房冠军的三级片——这个纪录的性质，比数字本身更刺眼。</p></div>
+          <div class="m-item"><b>全球破亿</b><p>计入台湾、澳新等市场，全球收入超过 1 亿港元。</p></div>
+          <div class="m-item"><b>未映先热</b><p>上映前海外版权已售逾 1000 万港元；出品方股价在影展期间连续上涨。</p></div>
+          <div class="m-item"><b>市场策划奖</b><p>2011 年 HKMA/TVB 杰出市场策划奖拿下铜奖、最具创意奖与最佳演绎奖三项。</p></div>
+        </div>
+      </div>
+
+      <div class="logic reveal">
+        <h3>它的营销闭环，可以拆成四步</h3>
+        <div class="logic-steps">
+          <div><span>1</span><p><b>技术标签</b>“全球首部 3D 情色片”——一句话就能上新闻。</p></div>
+          <div><span>2</span><p><b>审查落差</b>内地无法上映，反而制造了跨境观影的稀缺性与话题度。</p></div>
+          <div><span>3</span><p><b>选角跨域</b>中港日演员组合，直接对应各自市场的发行需求。</p></div>
+          <div><span>4</span><p><b>争议续航</b>批评本身成为二次传播的燃料，映期越长，账越好算。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 失落的胶片（插段） ============ -->
+  <section class="redacted-sec" aria-label="未公映段落说明">
+    <div class="wrap">
+      <div class="reel-head reveal">
+        <span class="reel-tag">LOST REEL / 未公映段落</span>
+        <h2>多出来的那十几分钟</h2>
+        <p>
+          2021 年，片方推出 128 分钟的「10 周年萧若元版本」——监制当年的初剪版，
+          收进了影院里没放过的段落。同一部电影，两个长度，是两份不同的账。
+        </p>
+      </div>
+
+      <div class="reel-grid">
+        <article class="reel reveal">
+          <div class="reel-top"><span>影院公映版</span><i>THEATRICAL</i></div>
+          <div class="redact" aria-hidden="true">
+            <i style="--w:100%"></i><i style="--w:74%"></i><i style="--w:91%"></i><i style="--w:62%"></i>
+          </div>
+          <p>为排片与分级服务的长度。第三幕被压到最紧，暴力的落点来得更快，观众来不及喘气。</p>
+        </article>
+        <article class="reel reveal">
+          <div class="reel-top"><span>十周年版</span><i>128′ · 2021</i></div>
+          <div class="redact" aria-hidden="true">
+            <i style="--w:100%"></i><i style="--w:88%"></i><i style="--w:96%"></i><i style="--w:79%"></i><i style="--w:93%"></i><i style="--w:58%"></i>
+          </div>
+          <p>初剪版的呼吸更长：人物的动机被补齐，代价来得更慢，也更重。</p>
+        </article>
+      </div>
+
+      <p class="reel-note reveal">
+        <b>这里不描述、不展示</b>被剪掉的具体内容——那部分属于影片本身，不属于解构。
+        我们只指出一件事：<em>长度的变化，改的是观众站在谁那一边。</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 05 争议 ============ -->
+  <section class="sec" id="debate" data-num="05">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="num">05</span>
+        <div>
+          <h2>争议：三重批评，与一种辩护</h2>
+          <p class="sub">把它当工业案例研究，和把它当文化产品批评，结论会完全不同。</p>
+        </div>
+      </div>
+
+      <div class="debate-grid">
+        <article class="debate-card reveal">
+          <h4>分级与可及性</h4>
+          <p>III 级意味着仅限 18 岁以上观众，内地无院线渠道。争议焦点不在分级本身，而在于“技术升级是否在为更强的刺激性背书”。</p>
+        </article>
+        <article class="debate-card reveal">
+          <h4>凝视结构</h4>
+          <p>女性主义批评指向镜头位置：摄影机为谁而设、谁在被看。第三幕把酷刑作为“惩戒”手段，被批评为以惩罚之名延长展示。</p>
+        </article>
+        <article class="debate-card reveal">
+          <h4>暴力越界</h4>
+          <p>后半段融入骑木驴、铁莲花等酷刑场景，类型从情色滑向 exploitation。这是当年影评分歧最大的部分。</p>
+        </article>
+        <article class="debate-card defense reveal">
+          <h4>辩护方：它是产业样本</h4>
+          <p>支持者的论点不在文本而在工业：它证明了停摆的类型可以用技术叙事重新融资、重新进院线、重新进入年度榜单。这个意义与影片质量无关。</p>
+        </article>
+      </div>
+
+      <div class="neutral reveal">
+        <p>本页立场：<strong>只做结构分析，不做价值背书。</strong>上述批评与辩护均为公开讨论中存在的观点归纳，不代表本页赞同任何一方。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 播放器 ============ -->
+  <section class="sec alt" id="player" data-num="06">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="num">06</span>
+        <div>
+          <h2>播放器组件 · 本地文件测试台</h2>
+          <p class="sub">这一节是纯技术 Demo：一个不依赖任何库的自定义播放器。它<strong>不内置、不加载、不链接任何片源</strong>。</p>
+        </div>
+      </div>
+
+      <div class="player-wrap reveal">
+        <div class="player" id="player">
+          <video id="video" playsinline></video>
+
+          <div class="player-empty" id="player-empty">
+            <div class="pe-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="46" height="46"><path d="M24 8v22m0 0l-8-8m8 8l8-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 34v4a2 2 0 002 2h26a2 2 0 002-2v-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pe-title">把你自己拥有的视频文件拖进来</p>
+            <p class="pe-sub">文件只在本地内存中播放，不会上传到任何服务器。支持 mp4 / webm / mkv（取决于浏览器解码能力）。</p>
+            <label class="btn primary file-btn">
+              选择本地文件
+              <input type="file" id="file-input" accept="video/*" hidden />
+            </label>
+          </div>
+
+          <div class="player-ui" id="player-ui" hidden>
+            <button class="pc-btn" id="btn-play" aria-label="播放/暂停">
+              <svg id="icon-play" viewBox="0 0 24 24" width="20" height="20"><path d="M8 5l11 7-11 7z" fill="currentColor"/></svg>
+              <svg id="icon-pause" viewBox="0 0 24 24" width="20" height="20" hidden><path d="M7 5h4v14H7zm6 0h4v14h-4z" fill="currentColor"/></svg>
+            </button>
+            <span class="pc-time" id="t-cur">00:00</span>
+            <input type="range" id="seek" class="seek" min="0" max="1000" value="0" step="1" aria-label="进度" />
+            <span class="pc-time dim" id="t-dur">00:00</span>
+            <button class="pc-btn" id="btn-mute" aria-label="静音">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 00-2.5-4v8a4.5 4.5 0 002.5-4z" fill="currentColor"/></svg>
+            </button>
+            <input type="range" id="vol" class="vol" min="0" max="1" step="0.01" value="0.9" aria-label="音量" />
+            <button class="pc-btn wide" id="btn-rate" aria-label="倍速">1×</button>
+            <button class="pc-btn wide" id="btn-ana" aria-pressed="false" aria-label="红蓝立体">3D</button>
+            <button class="pc-btn" id="btn-fs" aria-label="全屏">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+
+          <div class="player-drop" id="player-drop" hidden><span>松手载入本地文件</span></div>
+        </div>
+
+        <div class="player-side">
+          <div class="ps-block">
+            <h4>已实现能力</h4>
+            <ul class="ticks">
+              <li>自定义控制条，不依赖浏览器默认 UI</li>
+              <li>Blob URL 本地解码，零网络请求</li>
+              <li>拖拽载入 + 点击选择双通道</li>
+              <li>倍速循环 0.75× / 1× / 1.25× / 1.5× / 2×</li>
+              <li>红蓝立体滤镜（CSS 通道偏移）</li>
+              <li>键盘：空格 播放 · ←→ 快退快进 · M 静音</li>
+            </ul>
+          </div>
+          <div class="ps-block">
+            <h4>明确没有做</h4>
+            <ul class="cross">
+              <li>不内置任何影片片段</li>
+              <li>不提供片源地址或解析接口</li>
+              <li>不代理、不转存、不抓取第三方视频</li>
+              <li>不做播放量统计（无埋点、无上报）</li>
+            </ul>
+          </div>
+          <p class="ps-foot">符合项目既定隐私原则：不登记、不追踪、不统计匿名访客。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 接口备注 ============ -->
+  <section class="sec" id="bridge" data-num="07">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="num">07</span>
+        <div>
+          <h2>与 Imagine 的连接</h2>
+          <p class="sub">关于“主网站”的实际探测结果。</p>
+        </div>
+      </div>
+      <div class="bridge-grid">
+        <div class="bridge-card ok reveal">
+          <span class="badge ok">可用</span>
+          <h4>本地 Imagine 站点</h4>
+          <p>项目内的 Imagine 站点（心理学讲解 + 开放书架）在 <code>game-project/index.html</code>，由 <code>server.js</code> 提供 <code>/api/lessons</code>、<code>/api/library</code>、<code>/api/ages</code> 三个接口。本页顶部导航已接入双向互链。</p>
+          <a class="btn ghost small" href="../index.html">打开 Imagine →</a>
+        </div>
+        <div class="bridge-card warn reveal">
+          <span class="badge warn">不匹配</span>
+          <h4>公网 imagine.com</h4>
+          <p>该域名现为一家美国电信与主机服务商（网络设计、光纤施工、Quark 软件分销），与心理学内容项目无关，未提供任何公开 API 或嵌入能力。强行接入只会得到一个无意义的跳转。</p>
+          <a class="btn ghost small" href="https://imagine.com" target="_blank" rel="noopener noreferrer">自行核对 ↗</a>
+        </div>
+        <div class="bridge-card next reveal">
+          <span class="badge next">建议</span>
+          <h4>如果你有自己的域名</h4>
+          <p>把该站点部署到你的域名后，我可以把这里的互链改成真实地址，并在 <code>app.js</code> 里加一个 <code>IMAGINE_BASE</code> 常量统一管理，避免散落的硬编码。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="foot-col">
+      <div class="brand small">
+        <span class="brand-mark">解</span>
+        <span class="brand-text">肉蒲团<i>FILM DECONSTRUCTION</i></span>
+      </div>
+      <p class="foot-note">
+        本页为影视研究与前端练习用途的静态页面，全部内容基于公开资料整理，
+        不含任何影片画面、音频、片源或下载链接，亦不提供任何观看渠道。
+      </p>
+    </div>
+    <div class="foot-col">
+      <h5>资料来源</h5>
+      <ul class="src">
+        <li>百度百科 · 3D肉蒲团之极乐宝鉴 / 玉蒲团之偷情宝鉴 / 肉蒲团（李渔）</li>
+        <li>新浪娱乐 2011-03 报道（海外版权与出品方信息）</li>
+        <li>搜狐娱乐、百度百家号相关回顾文章（票房口径与十周年版本）</li>
+        <li>imagine.com 站点首页（连接可行性核对）</li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5>口径说明</h5>
+      <p class="foot-note">
+        香港票房存在 4108 万与 4170 万两种流传口径；本页采用监制萧若元 2011 年 6 月公布、
+        并被多数媒体沿用的 4108 万港元。前纪录《玉蒲团之偷情宝鉴》为 18,424,224 港元。
+      </p>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <span>© 2026 · 解构实验室 / 本地测试版</span>
+    <span>Built for study. No media hosted.</span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -82,6 +82,9 @@ const PUBLIC_FILES = new Set([
   'unclench/index.html',
   'unclench/styles.css',
   'unclench/app.js',
+  'rouputuan-lab/index.html',
+  'rouputuan-lab/styles.css',
+  'rouputuan-lab/app.js',
 ]);
 
 function safeStaticPath(urlPath) {
@@ -108,7 +111,7 @@ const server = http.createServer((req, res) => {
   const query = urlPath.includes('?') ? `?${urlPath.split('?').slice(1).join('?')}` : '';
 
   // 分站目录统一补斜杠，避免相对路径解析错位
-  if (['/sanjianke', '/cases', '/unclench'].includes(pathOnly)) {
+  if (['/sanjianke', '/cases', '/unclench', '/rouputuan-lab'].includes(pathOnly)) {
     res.writeHead(308, { Location: `${pathOnly}/${query}` });
     return res.end();
   }
